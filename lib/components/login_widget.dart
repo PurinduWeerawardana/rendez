@@ -12,6 +12,15 @@ class Login extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
+          child: Text(
+            'RENDEZ',
+            style: TextStyle(fontFamily: 'Jost', fontSize: 48),
+          ),
+        ),
+        SizedBox(
+          height: 100,
+        ),
+        Center(
           child: PrimaryButton(
             text: 'SignIn',
           ),
