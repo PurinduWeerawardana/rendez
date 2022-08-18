@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
-  PrimaryButton(
+  const PrimaryButton(
       {required this.text,
       this.onPress,
       this.size = const Size(300, 65),

@@ -8,35 +8,37 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Center(
-          child: Text(
-            'RENDEZ',
-            style: TextStyle(fontFamily: 'Jost', fontSize: 48),
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Center(
+            child: Text(
+              'RENDEZ',
+              style: TextStyle(fontFamily: 'Jost', fontSize: 48),
+            ),
           ),
-        ),
-        SizedBox(
-          height: 100,
-        ),
-        Center(
-          child: PrimaryButton(
-            text: 'SignIn',
+          const SizedBox(
+            height: 100,
           ),
-        ),
-        SizedBox(height: 20),
-        Center(
-          child: PrimaryButton(
-            text: 'LogIn',
-            onPress: () {
-              final provider =
-                  Provider.of<GoogleSignInProvider>(context, listen: false);
-              provider.googleLogin();
-            },
+          Center(
+            child: PrimaryButton(
+              text: 'SignIn',
+            ),
           ),
-        )
-      ],
+          const SizedBox(height: 20),
+          Center(
+            child: PrimaryButton(
+              text: 'LogIn',
+              onPress: () {
+                final provider =
+                    Provider.of<GoogleSignInProvider>(context, listen: false);
+                provider.googleLogin();
+              },
+            ),
+          )
+        ],
+      ),
     );
   }
 }

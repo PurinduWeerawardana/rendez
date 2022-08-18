@@ -21,7 +21,7 @@ class Rendez extends StatelessWidget {
       child: MaterialApp(
         routes: {
           LoginScreen.id: (context) => const LoginScreen(),
-          HomeScreen.id: (context) => const HomeScreen()
+          HomeScreen.id: (context) => HomeScreen()
         },
         initialRoute: LoginScreen.id,
       ),

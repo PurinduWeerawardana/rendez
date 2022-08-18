@@ -9,24 +9,22 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasData) {
-            final user = FirebaseAuth.instance.currentUser!;
-            return HomeScreen();
-          } else if (snapshot.hasError) {
-            return Center(
-              child: Column(children: [Text('Something went wrong')]),
-            );
-          } else {
-            return Login();
-          }
-        },
-      ),
+    return StreamBuilder(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasData) {
+          final user = FirebaseAuth.instance.currentUser!;
+          return HomeScreen();
+        } else if (snapshot.hasError) {
+          return Center(
+            child: Column(children: const [Text('Something went wrong')]),
+          );
+        } else {
+          return const Login();
+        }
+      },
     );
   }
 }
