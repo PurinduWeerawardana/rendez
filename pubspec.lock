@@ -372,7 +372,7 @@ packages:
     source: hosted
     version: "20.2.44"
   syncfusion_flutter_core:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: syncfusion_flutter_core
       url: "https://pub.dartlang.org"

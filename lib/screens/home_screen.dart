@@ -23,9 +23,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final FirebaseFirestore firestore = FirebaseFirestore.instance;
     CollectionReference test = firestore.collection('test');
+    CollectionReference appointments = firestore.collection('appointments');
     final user = FirebaseAuth.instance.currentUser!;
     final tabs = [
-      Calendar(),
+      Calendar(
+        collectionReference: appointments,
+      ),
       FormEdit(),
       Notifications(),
       Test(

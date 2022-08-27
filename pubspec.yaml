@@ -40,6 +40,7 @@ dependencies:
   provider: ^6.0.3
   cloud_firestore: ^3.4.4
   firebase_core: ^1.20.1
+  syncfusion_flutter_core: ^20.2.44
   syncfusion_flutter_calendar: ^20.2.44
 
 dev_dependencies:

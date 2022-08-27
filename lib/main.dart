@@ -19,6 +19,7 @@ class Rendez extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => GoogleSignInProvider(),
       child: MaterialApp(
+        theme: ThemeData(fontFamily: 'Jost', primaryColor: Color(0xFF9E51DA)),
         routes: {
           LoginScreen.id: (context) => const LoginScreen(),
           HomeScreen.id: (context) => HomeScreen()
